@@ -1,16 +1,14 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { ID, Root, Menu } from './routes'
 
 import { store } from './lib/store'
+import { loader as RootLoader } from './routes/Root'
+
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
-    loader: async (store) => {
-      return null
-    },
+    loader: RootLoader(store),
   },
   {
     path: '/:id',

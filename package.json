@@ -1,36 +1,28 @@
 {
-  "name": "menu",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "erik-filmon",
+  "version": "1.0.0",
+  "description": "```sh\r npx parcel index.html\r ```",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@reduxjs/toolkit": "^2.3.0",
-    "@types/react-router": "^5.1.20",
-    "axios": "^1.7.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-redux": "^9.1.2",
-    "react-router-dom": "^6.27.0"
+    "server": "nodemon server",
+    "client": "cd ./client && npm run dev",
+    "dev": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\"",
+    "build": "tsc",
+    "compile:watch": "tsc --watch",
+    "serve": "live-server",
+    "proxy": "node server.js"
   },
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "@types/node": "^22.9.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.3",
-    "eslint": "^9.13.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
-    "globals": "^15.11.0",
-    "tailwindcss": "^3.4.14",
-    "typescript": "~5.6.2",
-    "typescript-eslint": "^8.11.0",
-    "vite": "^5.4.10"
-  }
+    "live-server": "^1.2.2",
+    "typescript": "^5.6.3",
+    "nodemon": "^3.1.4",
+    "concurrently": "^6.2.1",
+    "express": "^4.17.1",
+    "cors": "^2.8.5",
+    "http-proxy-middleware": "^2.0.1",
+    "dotenv": "^10.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
