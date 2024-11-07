@@ -59,6 +59,7 @@ export const loader =
 const Root = () => {
   const data = useLoaderData() as any
   console.log('data', data)
+  console.log('hej')
   return (
     <div>
       <MenuContainer />

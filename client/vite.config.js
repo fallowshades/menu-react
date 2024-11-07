@@ -12,7 +12,7 @@ export default defineConfig({
       hmr: true,
       proxy: {
         '/api': {
-          target: 'https://6ldruff9ul.execute-api.eu-north-1.amazonaws.com',
+          target: 'https://6ldruff9ul.execute-api.eu-north-1.amazonaws.com/api',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ''),
           configure: (proxy) => {
