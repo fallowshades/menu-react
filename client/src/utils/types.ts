@@ -18,7 +18,16 @@ export type MenuItemsResponseWithParams = MenuItemsResponse & {
 }
 
 export interface MenuItemsResponse {
-  items: MenuItemRemote[] | []
+  items: MenuItemRemote[]
+}
+
+export type ApiResponse = {
+  // Define the structure of your API response here
+  items: any[]
+}
+
+export interface MenuItemsAxiosResponse extends ApiResponse {
+  data: { items: MenuItemRemote[] | [] }
 }
 export interface MenuItem {
   id: number

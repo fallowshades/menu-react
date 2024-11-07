@@ -1,14 +1,14 @@
 import axios from 'axios'
-const API_URL = 'http://localhost:3000/api/menu'
-const API_KEY = 'fallow'
+// const API_URL =
+// const API_KEY =
 
 const customFetch = axios.create({
-  // baseURL: '/api/v1',
-  baseURL: API_URL,
+  baseURL: '/api/v1',
+  //baseURL: 'http://localhost:3000/api',
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'x-zocom': API_KEY,
+    'x-zocom': 'fallow',
   },
 })
 
